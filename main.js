@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')();
 
 //Message to user asking if they intend to combine or deconstruct colors.
 
-const colorMethod = prompt("Type \"one\"to combine colors or \"two\" to deconstruct colors.");
+const colorMethod = prompt("Type [one]to combine colors or [two] to deconstruct colors.");
 
 //List of constant variables.
 
@@ -26,12 +26,18 @@ const greenColor =("green")
 
 if (colorMethod == combineColors){
     const firstcolorResponse = prompt(firstcolorCombine)
-    const secondcolorResponse = prompt(firstcolorCombine)
+    const secondcolorResponse = prompt(secondcolorCombine)
    
-    if (firstcolorResponse == redColor && secondcolorResponse == blueColor) {console.log("Colors combine to make purple.")
-    }else if (firstcolorResponse == redColor && secondcolorResponse ==   yellowColor)         
+    if (firstcolorResponse == redColor && secondcolorResponse == blueColor  || firstcolorResponse == blueColor && secondcolorResponse == redColor)
+     {console.log("Colors combine to make purple.")
+
+    }
+    else if (firstcolorResponse == redColor && secondcolorResponse ==   yellowColor|| firstcolorResponse == yellowColor && secondcolorResponse == redColor)         
     {   console.log("Colors combine to make orange.")
-    }else if (firstcolorResponse == blueColor && secondcolorResponse == yellowColor) {
+
+    }else if
+     (firstcolorResponse == blueColor && secondcolorResponse == yellowColor || firstcolorResponse == yellowColor && secondcolorResponse == blueColor ) 
+     {
     console.log("Colors combine to make green.")
 }
      else {console.log ("\"error\"")}
